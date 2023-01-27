@@ -6,7 +6,7 @@ import {
 
 export const fetchFilters = (request) => (dispatch) => {
   dispatch(filtersFetching());
-  request("https://redux-heroes.vercel.app/filters")
+  request("https://mocki.io/v1/9cf9cfce-920f-48b0-aa98-85f3b1adab2a/filters")
     .then((data) => dispatch(filtersFetched(data)))
     .catch(() => dispatch(filtersFetchingError()));
 };

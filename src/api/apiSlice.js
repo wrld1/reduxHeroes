@@ -2,7 +2,9 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const apiSlice = createApi({
   reducerPath: "api",
-  baseQuery: fetchBaseQuery({ baseUrl: "https://redux-heroes.vercel.app" }),
+  baseQuery: fetchBaseQuery({
+    baseUrl: "https://mocki.io/v1/9cf9cfce-920f-48b0-aa98-85f3b1adab2a",
+  }),
   tagTypes: ["Heroes"],
   endpoints: (builder) => ({
     getHeroes: builder.query({

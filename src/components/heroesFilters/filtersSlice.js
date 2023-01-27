@@ -16,7 +16,7 @@ const initialState = filtersAdapter.getInitialState({
 
 export const fetchFilters = createAsyncThunk("filters/fetchFilters", () => {
   const { request } = useHttp();
-  return request("https://redux-heroes.vercel.app/filters");
+  return request("https://mocki.io/v1/9cf9cfce-920f-48b0-aa98-85f3b1adab2a/filters");
 });
 
 const filtersSlice = createSlice({
