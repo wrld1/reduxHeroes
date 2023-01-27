@@ -6,7 +6,7 @@ import {
 
 export const fetchFilters = (request) => (dispatch) => {
   dispatch(filtersFetching());
-  request("http://localhost:3001/filters")
+  request("https://redux-heroes.vercel.app/filters")
     .then((data) => dispatch(filtersFetched(data)))
     .catch(() => dispatch(filtersFetchingError()));
 };

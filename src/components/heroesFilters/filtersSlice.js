@@ -16,7 +16,7 @@ const initialState = filtersAdapter.getInitialState({
 
 export const fetchFilters = createAsyncThunk("filters/fetchFilters", () => {
   const { request } = useHttp();
-  return request("http://localhost:3001/filters");
+  return request("https://redux-heroes.vercel.app/filters");
 });
 
 const filtersSlice = createSlice({
