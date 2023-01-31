@@ -1,12 +1,6 @@
 import { createSlice, createAsyncThunk, createEntityAdapter } from "@reduxjs/toolkit";
 import { useHttp } from "../../hooks/http.hook";
 
-// const initialState = {
-//   filters: [],
-//   filtersLoadingStatus: "idle",
-//   activeFilter: "all",
-// };
-
 const filtersAdapter = createEntityAdapter();
 
 const initialState = filtersAdapter.getInitialState({
@@ -16,7 +10,7 @@ const initialState = filtersAdapter.getInitialState({
 
 export const fetchFilters = createAsyncThunk("filters/fetchFilters", () => {
   const { request } = useHttp();
-  return request("https://my-json-server.typicode.com/wrld1/heroesApi/filters");
+  return request("https://json-server-todo.herokuapp.com/filters");
 });
 
 const filtersSlice = createSlice({

@@ -6,7 +6,7 @@ import {
 
 export const fetchFilters = (request) => (dispatch) => {
   dispatch(filtersFetching());
-  request("https://my-json-server.typicode.com/wrld1/heroesApi/filters")
+  request("https://json-server-todo.herokuapp.com/filters")
     .then((data) => dispatch(filtersFetched(data)))
     .catch(() => dispatch(filtersFetchingError()));
 };
